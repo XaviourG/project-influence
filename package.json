@@ -6,19 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync-db": "npx prisma db pull --schema=./src/data/database/prisma/schema.prisma && npx prisma generate --schema=./src/data/database/prisma/schema.prisma",
+    "update-db": "npx prisma db push --schema=./src/data/database/prisma/schema.prisma"
   },
   "dependencies": {
+    "@prisma/client": "^5.4.1",
+    "next": "13.5.4",
+    "prisma": "^5.4.1",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4"
+    "eslint-config-next": "13.5.4",
+    "typescript": "^5"
   }
 }
