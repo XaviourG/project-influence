@@ -4,14 +4,16 @@ import { getDatabaseService } from "@/data/database/DatabaseService";
 import { useEffect, useState } from "react";
 import { Article } from "@prisma/client";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+import ThemeChanger from "@/components/global/test";
 
 interface Props {
+  children: React.ReactNode;
   params: {
     article: string;
   };
 }
 
-const ArticleLayout = async ({ params }: Props) => {
+const ArticleLayout = async ({ children, params }: Props) => {
   const { article: articlePath } = params;
 
   const DB = getDatabaseService();
@@ -19,7 +21,12 @@ const ArticleLayout = async ({ params }: Props) => {
   if (!fetchArticle || !fetchArticle.isSuccess)
     throw new Error("Failed to load article");
 
-  return <div>{fetchArticle.data.content}</div>;
+  return (
+    <div>
+      {fetchArticle.data.content}
+      {children}
+    </div>
+  );
 };
 
 export default ArticleLayout;
