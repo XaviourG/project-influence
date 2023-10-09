@@ -14,11 +14,14 @@ class DatabaseService implements IDatabaseService {
   getArticle = async (path: string): Promise<Result<Article>> => {
     let article: Article | null = null;
     try { 
+      console.log({ before: article });
       article = await this.client.article.findUnique({ where: { pathname: path.toLocaleLowerCase() } });
+      console.log({ after: article });
       if (!article) {
         throw new Error('Could not find database entity');
       }
     } catch (e: any) {
+      console.error(e);
       return ResultFactory.createFailure<Article>(e?.message);
     }
     return ResultFactory.createSuccess(article as Article)
