@@ -4,7 +4,7 @@ import { getDatabaseService } from "@/data/database/DatabaseService";
 import { useEffect, useState } from "react";
 import { Article } from "@prisma/client";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
-import ThemeChanger from "@/components/global/test";
+import ThemeChanger from "@/components/global/theme/toggle";
 
 interface Props {
   children: React.ReactNode;

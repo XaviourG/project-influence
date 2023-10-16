@@ -11,3 +11,33 @@
     left: 100vw;
   }
 }
+
+.toggle-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &.hover {
+    gap: 0.4rem;
+  }
+
+  .line {
+    width: 1.5rem;
+    height: 0.25rem;
+    border-radius: 1rem;
+    background-color: var(--background);
+    transition: width 0.5s;
+
+    &.toggle2 {
+      width: 1rem
+    }
+
+    &.toggle3 {
+      width: 0.5rem
+    }
+  }
+}

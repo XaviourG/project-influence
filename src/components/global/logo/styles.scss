@@ -1,0 +1,13 @@
+.logo-root {
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: inherit;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 1s;
+}

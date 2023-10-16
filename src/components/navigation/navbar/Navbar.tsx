@@ -1,8 +1,8 @@
 "use client";
 
-import Logo from "@/components/global/Logo";
+import Logo from "@/components/global/logo/icon";
 import "./styles.scss";
-import ThemeChanger from "@/components/global/test";
+import ThemeChanger from "@/components/global/theme/toggle";
 import NavigationMenuToggle from "../menu/Toggle";
 import { useEffect, useState } from "react";
 import NavigationMenu from "../menu/NavigationMenu";
@@ -48,10 +48,15 @@ const Navbar = ({ children }: NavbarProps) => {
       <div
         className={`navbar-root ${isHidden && isMenuHidden ? "hidden" : ""}`}
       >
-        <Logo />
-        <div className="group">
-          <ThemeChanger />
-          <NavigationMenuToggle toggleMenu={toggleMenuHidden} />
+        <div className="content">
+          <Logo />
+          <div className="group">
+            {!isMenuHidden && <ThemeChanger />}
+            <NavigationMenuToggle
+              toggleMenu={toggleMenuHidden}
+              isMenuOpen={!isMenuHidden}
+            />
+          </div>
         </div>
       </div>
       <NavigationMenu isHidden={isMenuHidden} />
