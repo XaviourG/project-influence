@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { LayoutProps } from "../../.next/types/app/layout";
 import { Providers } from "@/components/providers/providers";
+import Navbar from "@/components/navigation/navbar/Navbar";
+import Footer from "@/components/navigation/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +17,11 @@ const LandingLayout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar>
+            <Footer>{children}</Footer>
+          </Navbar>
+        </Providers>
       </body>
     </html>
   );

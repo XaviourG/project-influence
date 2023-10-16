@@ -1,0 +1,26 @@
+.navbar-global-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: grey;
+  position: sticky;
+  top: 0rem;
+  height: 4rem;
+  transition: top 0.2s;
+
+  &.hidden {
+    top: -4rem;
+  }
+
+
+  .group {
+    display: flex;
+    gap: 1rem;
+  }
+}

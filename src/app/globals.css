@@ -8,3 +8,8 @@
   --background: black;
   --foreground: white;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+}
