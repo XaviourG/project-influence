@@ -1,0 +1,13 @@
+.nav-menu-root {
+  background-color: grey;
+  position: fixed;
+  top: 4rem;
+  left: 0vw;
+  transition: left 0.4s;
+  height: 100vh;
+  width: 100vw;
+
+  &.hidden {
+    left: 100vw;
+  }
+}

@@ -1,7 +1,15 @@
 "use client";
 
-const NavigationMenuToggle = () => {
-  return <div className="navbar-global-wrapper">nav menu toggle</div>;
+interface NavigationMenuToggleProps {
+  toggleMenu: () => void;
+}
+
+const NavigationMenuToggle = ({ toggleMenu }: NavigationMenuToggleProps) => {
+  return (
+    <div className="navbar-global-wrapper" onClick={toggleMenu}>
+      nav menu toggle
+    </div>
+  );
 };
 
 export default NavigationMenuToggle;

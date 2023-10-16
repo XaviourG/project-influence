@@ -5,6 +5,7 @@ import "./styles.scss";
 import ThemeChanger from "@/components/global/test";
 import NavigationMenuToggle from "../menu/Toggle";
 import { useEffect, useState } from "react";
+import NavigationMenu from "../menu/NavigationMenu";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ interface NavbarProps {
 
 const Navbar = ({ children }: NavbarProps) => {
   const [isHidden, setIsHidden] = useState(false);
+  const [isMenuHidden, setIsMenuHidden] = useState(true);
 
   useEffect(() => {
     let prevScrollY = 0;
@@ -31,15 +33,28 @@ const Navbar = ({ children }: NavbarProps) => {
     };
   }, []);
 
+  const toggleMenuHidden = () => {
+    if (isMenuHidden) {
+      setIsMenuHidden(false);
+      document.body.style.overflow = "hidden";
+    } else {
+      setIsMenuHidden(true);
+      document.body.style.overflow = "unset";
+    }
+  };
+
   return (
     <div className="navbar-global-wrapper">
-      <div className={`navbar-root ${isHidden ? "hidden" : ""}`}>
+      <div
+        className={`navbar-root ${isHidden && isMenuHidden ? "hidden" : ""}`}
+      >
         <Logo />
         <div className="group">
           <ThemeChanger />
-          <NavigationMenuToggle />
+          <NavigationMenuToggle toggleMenu={toggleMenuHidden} />
         </div>
       </div>
+      <NavigationMenu isHidden={isMenuHidden} />
       {children}
     </div>
   );

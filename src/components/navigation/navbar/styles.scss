@@ -1,6 +1,9 @@
+$navbar-height: 4rem;
+
 .navbar-global-wrapper {
   display: flex;
   flex-direction: column;
+  padding-top: $navbar-height;
 }
 
 .navbar-root {
@@ -9,13 +12,13 @@
   align-items: center;
   width: 100%;
   background-color: grey;
-  position: sticky;
+  position: fixed;
   top: 0rem;
-  height: 4rem;
+  height: $navbar-height;
   transition: top 0.2s;
 
   &.hidden {
-    top: -4rem;
+    top: -$navbar-height;
   }
 
 
