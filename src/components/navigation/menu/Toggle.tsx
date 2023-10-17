@@ -35,8 +35,8 @@ const NavigationMenuToggle = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="line" />
-      <div className={`line ${isMenuOpen ? "toggle2" : ""}`} />
-      <div className={`line ${isMenuOpen ? "toggle3" : ""}`} />
+      <div className={`line ${isMenuOpen ? "" : "toggle2"}`} />
+      <div className={`line ${isMenuOpen ? "" : "toggle3"}`} />
     </div>
   );
 };

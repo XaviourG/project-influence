@@ -8,7 +8,9 @@ interface NavigationMenuProps {
 
 const NavigationMenu = ({ isHidden }: NavigationMenuProps) => {
   return (
-    <div className={`nav-menu-root ${isHidden ? "hidden" : ""}`}>nav menu</div>
+    <div className={`nav-menu-root ${isHidden ? "hidden" : ""}`}>
+      latest article menu item
+    </div>
   );
 };
 

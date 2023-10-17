@@ -1,5 +1,6 @@
 .nav-menu-root {
-  background-color: grey;
+  background-color: var(--foreground-translucent);
+  backdrop-filter: blur(10px);
   position: fixed;
   top: 4rem;
   left: 0vw;

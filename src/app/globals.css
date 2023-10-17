@@ -1,15 +1,36 @@
 :root {
   /* Your default theme */
   --background: white;
-  --foreground: black;
+  --foreground: beige;
+  --foreground-translucent: rgba(245, 245, 220, 0.75);
+
   --primary: blue;
+  --primary-dark: darkblue;
+  --primary-light: lightblue;
+
+  --neutral-light: lightgrey;
+  --neutral-mid: grey;
+  --neutral-dark: darkgrey;
+
+  --text-body: black;
+  --text-heading: black;
 }
 
 [data-theme='dark'] {
   --background: black;
-  --foreground: white;
-  --primary: pink;
+  --foreground: darkgrey;
+  --foreground-translucent: rgba(169, 169, 169, 0.75);
 
+  --primary: hotpink;
+  --primary-dark: purple;
+  --primary-light: pink;
+
+  --neutral-light: lightgrey;
+  --neutral-mid: grey;
+  --neutral-dark: darkgrey;
+
+  --text-body: black;
+  --text-heading: black;
 }
 
 body {
