@@ -17,20 +17,20 @@
 }
 
 [data-theme='dark'] {
-  --background: black;
-  --foreground: darkgrey;
-  --foreground-translucent: rgba(169, 169, 169, 0.75);
+  --background: #000D18;
+  --foreground: rgb(2, 17, 31);
+  --foreground-translucent: rgba(2, 17, 31, 0.75);
 
-  --primary: hotpink;
-  --primary-dark: purple;
-  --primary-light: pink;
+  --primary: #DBFFF8;
+  --primary-dark: #AFC6C2;
+  --primary-light: #F1FFFC;
 
   --neutral-light: lightgrey;
   --neutral-mid: grey;
   --neutral-dark: darkgrey;
 
-  --text-body: black;
-  --text-heading: black;
+  --text-body: #FFFFFF;
+  --text-heading: #DBFFF8;
 }
 
 body {
