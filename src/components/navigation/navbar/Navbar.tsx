@@ -59,7 +59,7 @@ const Navbar = ({ children }: NavbarProps) => {
           </div>
         </div>
       </div>
-      <NavigationMenu isHidden={isMenuHidden} />
+      <NavigationMenu isHidden={isMenuHidden} toggleMenu={toggleMenuHidden} />
       {children}
     </div>
   );

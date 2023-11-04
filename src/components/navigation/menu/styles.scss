@@ -7,9 +7,44 @@
   transition: left 0.4s;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
 
   &.hidden {
     left: 100vw;
+  }
+
+  .menu-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-article-width);
+    padding: 4rem;
+
+    .menu-link-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem;
+
+      .menu-link {
+        width: 100%;
+        border: 1px solid var(--primary);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin: 0;
+        text-decoration: none;
+        color: var(--primary);
+        background-color: var(--invisible);
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: var(--background);
+          box-shadow: inset 0 0 4px 0 var(--primary);
+        }
+      }
+    }
   }
 }
 

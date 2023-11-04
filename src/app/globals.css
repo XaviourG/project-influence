@@ -3,6 +3,7 @@
   --background: white;
   --foreground: beige;
   --foreground-translucent: rgba(245, 245, 220, 0.75);
+  --invisible: rgba(0,0,0,0);
 
   --primary: blue;
   --primary-dark: darkblue;

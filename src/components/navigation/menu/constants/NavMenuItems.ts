@@ -5,9 +5,22 @@ export interface NavMenuItem {
   icon: string,
 }
 
-export const NAV_MENU_ITEMS = [
+export const NAV_MENU_LINKS = [
   {
-    label: 'Library',
+    label: 'Article Library',
+    path: '/blog',
+    icon: ''
+  },
+  {
+    label: 'New? Start Here',
+    path: '/blog/why',
+    icon: ''
+  }
+]
+
+export const NAV_MENU_SOCIALS = [
+  {
+    label: 'ArticleLibrary',
     path: '/blog',
     icon: ''
   }

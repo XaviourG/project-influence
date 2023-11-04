@@ -4,7 +4,7 @@
   h1 {
     color: var(--primary);
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0 0 1rem 0;
     padding: 0;
   }
@@ -20,17 +20,19 @@
   h3 {
     color: var(--primary);
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0 0 1rem 0;
     padding: 0;
   }
 
   p {
     color: var(--text-body);
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   strong {
-    color: var(--text-body);
+    color: var(--primary);
     font-weight: 600;
   }
 
@@ -57,7 +59,10 @@
     border: 2px solid var(--text-body);
     border-radius: var(--radius);
     max-width: var(--max-article-width);
+    margin: 1rem 0rem;
   }
 
-  hr {}
+  hr {
+    border-color: var(--primary-dark);
+  }
 }
