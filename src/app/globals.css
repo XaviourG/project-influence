@@ -14,6 +14,10 @@
 
   --text-body: black;
   --text-heading: black;
+
+  /* other thingos */
+  --radius: 20px;
+  --max-article-width: 50rem;
 }
 
 [data-theme='dark'] {
@@ -36,4 +40,6 @@
 body {
   padding: 0;
   margin: 0;
+
+  background-color: var(--background);
 }

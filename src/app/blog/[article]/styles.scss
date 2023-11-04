@@ -1,0 +1,9 @@
+.article-page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .article-page-content {
+    max-width: var(--max-article-width);
+  }
+}
