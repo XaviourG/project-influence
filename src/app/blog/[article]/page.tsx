@@ -4,6 +4,7 @@ import AuthorSignature from "@/components/article/signature/author-signature";
 import { getDatabaseService } from "@/data/database/DatabaseService";
 
 import "./styles.scss";
+import { DEFAULT_AUTHOR } from "./constants";
 
 interface Props {
   params: {
@@ -25,7 +26,12 @@ const ArticlePage = async ({ params }: Props) => {
       <div className="article-page-content">
         <ArticleHeading title={article.subtitle} subtitle={article.subtitle} />
         <MarkdownContent content={article.content} />
-        <AuthorSignature publishDate={article.published_at} />
+        <AuthorSignature
+          name={DEFAULT_AUTHOR.NAME}
+          bio={DEFAULT_AUTHOR.BIO}
+          image={DEFAULT_AUTHOR.IMAGE}
+          publishDate={article.published_at}
+        />
       </div>
     </div>
   );

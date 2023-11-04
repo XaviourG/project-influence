@@ -5,6 +5,7 @@ import "./styles.scss";
 import { usePathname } from "next/navigation";
 import AuthorSignature from "@/components/article/signature/author-signature";
 import { NAV_MENU_LINKS } from "./constants/NavMenuItems";
+import { DEFAULT_AUTHOR } from "@/app/blog/[article]/constants";
 
 interface NavigationMenuProps {
   isHidden: boolean;
@@ -31,7 +32,9 @@ const NavigationMenu = ({ isHidden, toggleMenu }: NavigationMenuProps) => {
             </Link>
           </div>
         ))}
-        {/* SOCIAL LINKS */}
+        <div className="menu-link">
+          <AuthorSignature image={DEFAULT_AUTHOR.IMAGE} publishDate={null} />
+        </div>
       </div>
     </div>
   );
