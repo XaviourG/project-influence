@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 interface Props {
   article: Article;
-  toggleMenu: () => void;
+  toggleMenu?: () => void;
 }
 
 const extendSubtitleToRequiredScrollingLength = (subtitle: string) => {
@@ -30,7 +30,7 @@ const LatestArticleShowcase = ({ article, toggleMenu }: Props) => {
 
   const handleClick = () => {
     router.push(`/blog/${article.pathname}`);
-    toggleMenu();
+    if (toggleMenu) toggleMenu();
   };
 
   return (

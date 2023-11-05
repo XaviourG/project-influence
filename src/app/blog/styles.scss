@@ -1,0 +1,14 @@
+.library-page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .library-page-container {
+    width: 100%;
+    max-width: var(--max-article-width);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

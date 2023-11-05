@@ -8,6 +8,7 @@
   --primary: blue;
   --primary-dark: darkblue;
   --primary-light: lightblue;
+  --primary-50: rgba(219, 255, 248, 0.5);
 
   --neutral-light: lightgrey;
   --neutral-mid: grey;
@@ -29,6 +30,7 @@
   --primary: #DBFFF8;
   --primary-dark: #AFC6C2;
   --primary-light: #F1FFFC;
+  --primary-50: rgba(219, 255, 248, 0.5);
 
   --neutral-light: lightgrey;
   --neutral-mid: grey;

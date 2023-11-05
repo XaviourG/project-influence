@@ -1,0 +1,20 @@
+.welcome-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+
+  .title {
+    color: var(--foreground);
+    text-shadow: 0 0 2px var(--primary-50);
+    padding: 0;
+    margin: 0;
+  }
+  .subtitle {
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    padding: 0;
+    margin: 0;
+  }
+}
