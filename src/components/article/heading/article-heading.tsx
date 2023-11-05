@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import "./styles.scss";
 
 interface Props {
   title: any;
@@ -6,7 +6,12 @@ interface Props {
 }
 
 const ArticleHeading = ({ title, subtitle }: Props) => {
-  return <Fragment></Fragment>;
+  return (
+    <div className="article-heading-container">
+      <h1 className="title">{title}</h1>
+      <h6 className="subtitle">{subtitle}</h6>
+    </div>
+  );
 };
 
 export default ArticleHeading;

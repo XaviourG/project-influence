@@ -24,7 +24,7 @@ const ArticlePage = async ({ params }: Props) => {
   return (
     <div className="article-page-wrapper">
       <div className="article-page-content">
-        <ArticleHeading title={article.subtitle} subtitle={article.subtitle} />
+        <ArticleHeading title={article.title} subtitle={article.subtitle} />
         <MarkdownContent content={article.content} />
         <AuthorSignature
           name={DEFAULT_AUTHOR.NAME}
