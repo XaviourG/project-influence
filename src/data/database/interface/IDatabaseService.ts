@@ -5,6 +5,7 @@ import { ArticlePreview } from "@/data/models/article";
 interface IDatabaseService {
   getManyArticlePreview(): Promise<Result<ArticlePreview[]>>;
   getArticle(path: string): Promise<Result<Article>>;
+  getLatestArticle(): Promise<Result<Article>>;
 }
 
 export default IDatabaseService;

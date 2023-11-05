@@ -39,6 +39,19 @@ class DatabaseService implements IDatabaseService {
     }
     return ResultFactory.createSuccess(articleList)
   }
+
+  getLatestArticle = async (): Promise<Result<Article>> => {
+    let latestArticle;
+    try { 
+      latestArticle = await this.client.article.findFirst({ orderBy: { created_at: 'desc'} });
+      if (!latestArticle) {
+        throw new Error('Could not find latest article');
+      }
+    } catch (e: any) {
+      return ResultFactory.createFailure<Article>(e?.message);
+    }
+    return ResultFactory.createSuccess(latestArticle)
+  }
 }
 
 // database singleton

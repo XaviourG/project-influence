@@ -17,6 +17,7 @@
   .menu-body {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
     align-items: center;
     width: 100%;
     max-width: var(--max-article-width);
@@ -26,7 +27,8 @@
       display: flex;
       justify-content: center;
       width: 100%;
-      padding: 1rem;
+      padding: 0;
+      margin: 0;
 
       .menu-link {
         width: 100%;
@@ -42,6 +44,68 @@
         &:hover {
           background-color: var(--background);
           box-shadow: inset 0 0 4px 0 var(--primary);
+        }
+      }
+    }
+
+    .article-showcase-container {
+      width: 100%;
+      border: 1px solid var(--primary);
+      border-radius: var(--radius);
+      margin: 0 0 2rem 0;
+      text-decoration: none;
+      color: var(--primary);
+      background-color: var(--invisible);
+      cursor: pointer;
+      transition: all 0.5s;
+    
+      &:hover {
+        background-color: var(--background);
+        box-shadow: inset 0 0 4px 0 var(--primary);
+      }
+
+      .info-container {
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .title {
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+        .date-text {
+          color: var(--neutral-dark);
+          font-size: 0.75reml;
+        }
+      }
+
+      .scrolling-subtitle {
+        height: 2rem;
+        background-color: var(--primary);
+        overflow: hidden;
+        position: relative;
+        border-radius: var(--radius) var(--radius) 0 0;
+        border: 1px solid var(--primary);
+        p {
+          text-transform: capitalize;
+          text-wrap: nowrap;
+          white-space: preserve nowrap;
+          margin: 0;
+          padding: 0;
+          font-size: 0.75rem;
+          font-weight: 600;
+          line-height: 2rem;
+          color: var(--background);
+          animation: scrollLeft 60s linear infinite;
+        }
+
+        @keyframes scrollLeft {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-200rem);
+          }
         }
       }
     }

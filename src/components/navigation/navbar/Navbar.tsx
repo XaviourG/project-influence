@@ -6,12 +6,14 @@ import ThemeChanger from "@/components/global/theme/toggle";
 import NavigationMenuToggle from "../menu/Toggle";
 import { useEffect, useState } from "react";
 import NavigationMenu from "../menu/NavigationMenu";
+import { Article } from "@prisma/client";
 
 interface NavbarProps {
   children: React.ReactNode;
+  latestArticle: Article;
 }
 
-const Navbar = ({ children }: NavbarProps) => {
+const Navbar = ({ children, latestArticle }: NavbarProps) => {
   const [isHidden, setIsHidden] = useState(false);
   const [isMenuHidden, setIsMenuHidden] = useState(true);
 
@@ -59,7 +61,11 @@ const Navbar = ({ children }: NavbarProps) => {
           </div>
         </div>
       </div>
-      <NavigationMenu isHidden={isMenuHidden} toggleMenu={toggleMenuHidden} />
+      <NavigationMenu
+        isHidden={isMenuHidden}
+        toggleMenu={toggleMenuHidden}
+        latestArticle={latestArticle}
+      />
       {children}
     </div>
   );
