@@ -1,4 +1,4 @@
-import ArticleList from "@/components/library/ArticleList";
+import ArticleList from "@/components/library/preview/ArticleList";
 import { getDatabaseService } from "@/data/database/DatabaseService";
 
 import "./styles.scss";

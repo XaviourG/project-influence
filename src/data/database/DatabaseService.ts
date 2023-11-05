@@ -30,7 +30,7 @@ class DatabaseService implements IDatabaseService {
   getManyArticlePreview = async (): Promise<Result<ArticlePreview[]>> => {
     let articleList: ArticlePreview[] = [];
     try { 
-      articleList = await this.client.article.findMany();
+      articleList = await this.client.article.findMany({ select: { title: true, subtitle: true, pathname: true, published_at: true }, orderBy: { created_at: 'desc'} });
       if (!(articleList?.length > 0)) {
         throw new Error('Could not find any database entities');
       }
