@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   padding-top: 2rem;
+  max-width: 30rem;
 
 
   .image-container {
@@ -31,10 +32,19 @@
       .author-name {
         padding: 0;
         margin: 0;
+        border-bottom: 1px solid var(--primary-dark);
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+        font-size: 1rem;
       }
       .author-bio {
         padding: 0;
         margin: 0;
+        font-style: italic;
+        color: var(--primary-dark);
+        font-size: 0.75rem;
+        padding-bottom: 2rem;
       }
     }
   }

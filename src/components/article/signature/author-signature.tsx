@@ -3,8 +3,8 @@ import { FaLinkedin, FaInstagramSquare, FaTwitterSquare } from "react-icons/fa";
 import "./styles.scss";
 
 interface Props {
-  name: string;
-  bio: string;
+  name?: string;
+  bio?: string;
   image: string;
   publishDate: Date | null;
 }
